@@ -9,3 +9,12 @@ body{
     margin: 20px;
     margin-bottom: 20px;
 }
+.btn-all{
+    background-color: #EB5757;
+    color: #ffffff;
+    text-align: center;
+    border: 1px solid #EB5757;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0px auto;
+}
