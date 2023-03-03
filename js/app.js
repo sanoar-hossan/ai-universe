@@ -36,7 +36,9 @@ infos.forEach(info => {
             <div class="d-flex">
             <i class="fa-solid fa-calendar-days mt-2 mx-3"></i>
             <p class="mt-2">${info.published_in}</p>
-            <i class="fa-solid fa-square-right"></i>
+             <button id="details-btn" class="detail-btn">Details</button>
+           
+             
              </div>
              
              

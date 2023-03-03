@@ -10,11 +10,20 @@ body{
     margin-bottom: 20px;
 }
 .btn-all{
-    background-color: #EB5757;
+    background-color: #db3d3d;
     color: #ffffff;
     text-align: center;
     border: 1px solid #EB5757;
     border-radius: 15px;
     padding: 10px;
     margin: 0px auto;
+}
+.detail-btn{
+    background-color: #eb5757;
+    color: #ffffff;
+    text-align: center;
+    border: 1px solid #eb5757;
+    border-radius: 15px;
+    margin: 0px auto;
+    
 }
