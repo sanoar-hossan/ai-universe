@@ -12,11 +12,14 @@
 </head>
 <body>
     <main>
-        <section>
+        <section class="heading"> 
     <h1 class="heading">AI Universe Hub</h1>
-    <button class="btn btn-secondary">Sort By Date</button>
-
+    <div>
+    <button class="btn-all ">Sort By Date</button>
+</div>
 </section>
+
+    
 <section class="card-section container">
     <div id="card-area" class="row row-cols-1 row-cols-md-3 g-4">
         
@@ -25,6 +28,8 @@
         
       </div>
 </section>
+
+
 <!--spinner-->
 <section>
   <div id="loader" class="d-flex justify-content-center m-3 d-none">
@@ -33,9 +38,11 @@
     </div>
   </div>
 </section>
-    <section class="text-center">
-        <button onclick="displayAll()" class="btn-all">See More</button>
-    </section>
+<!--see more-->
+<section class="text-center">
+  <button onclick="seeAll()" class="btn-all" id="see-more">See More</button>
+</section>
+
 
    <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -59,7 +66,7 @@
       </div>
     </div>
   </div>
-      
+  
 </main>
 
 
@@ -67,5 +74,6 @@
 <script src="https://kit.fontawesome.com/3453120d6a.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
+    
 </body>
 </html>
