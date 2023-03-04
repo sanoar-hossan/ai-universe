@@ -74,7 +74,7 @@ toggleSpinner(false);
 const displayData= (infos)=>{
     const cardArea=document.getElementById('card-area')
 toggleSpinner(true);
-    //infos=infos.slice(0,6)
+    
 
 infos.slice(0,6).forEach(info => {
    const cardDiv=document.createElement('div')
@@ -96,10 +96,12 @@ infos.slice(0,6).forEach(info => {
             <p class="mt-2">${info.published_in}</p>
              
            
-            <button onclick="modalData('{info.data.id}')" type="button" class=" detail-btn btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Details</button>
+            
 
-
+            <button onclick="modalData('${info.id}')" type="button" class=" detail-btn btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Details
+          </button>
+          
            
              
              </div>
@@ -127,19 +129,22 @@ const toggleSpinner=isLoading=>{
   }
 }
 
-//modal info 
-const modalData=()=>{
-  url=`https://openapi.programming-hero.com/api/ai/tool/${01}`
+const modalData = (id) => {
+  const url = `https://openapi.programming-hero.com/api/ai/tools/${id}`;
   fetch(url)
-  .then(res=> res.json())
-  .then(data=>displayModal(data))
-  
-}
-modalData()
-const displayModal=info=>{
-modalText=document.getElementById('modal-text')
-modalText.innerHTML=`
-<p>${info.data.description}</p>
-`
-}
+    .then((res) => res.json())
+    .then((data) => {
+      const modalText = document.getElementById('modal-text');
+      const modalImage = document.getElementById('modal-image');
+      modalText.innerHTML = `
+        <h4>${data.data.tool_name}</h4>
+        <p>${data.data.description}</p>
+        <ul>
+          ${data.data.features.map((feature) => `<li>${feature.feature_name}</li>`).join('')}
+        </ul>
+      `;
+      modalImage.innerHTML = `<img src="${data.data.image}" alt="${data.data.name}" />`;
+    });
+
+};
 
