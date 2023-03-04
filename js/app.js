@@ -10,6 +10,10 @@ const getData = () => {
     .then((data) => displayData(data.data.tools));
 };
 getData();
+// Sort data by date in ascending order
+const sortByDate = (data) => {
+  return data.sort((a, b) => new Date(a.published_in) - new Date(b.published_in));
+};
 
 const seeAll=()=>{
   const getData = () => {
