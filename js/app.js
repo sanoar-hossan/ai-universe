@@ -10,11 +10,9 @@ const getData = () => {
     .then((data) => displayData(data.data.tools));
 };
 getData();
-// Sort data by date in ascending order
-const sortByDate = (data) => {
-  return data.sort((a, b) => new Date(a.published_in) - new Date(b.published_in));
-};
 
+
+  
 const seeAll=()=>{
   const getData = () => {
     url = `https://openapi.programming-hero.com/api/ai/tools`;
@@ -67,12 +65,13 @@ infos.slice(6,12).forEach(info => {
 });
 toggleSpinner(false);
 
+
 }
 }
 
 
 
-
+  
 
 //display 6 data function
 const displayData= (infos)=>{
