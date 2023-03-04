@@ -12,7 +12,7 @@
 </head>
 <body>
     <main>
-        <section></section>
+        <section>
     <h1 class="heading">AI Universe Hub</h1>
     <button class="btn btn-secondary">Sort By Date</button>
 
@@ -25,9 +25,41 @@
         
       </div>
 </section>
+<!--spinner-->
+<section>
+  <div id="loader" class="d-flex justify-content-center m-3 d-none">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+</section>
     <section class="text-center">
         <button onclick="displayAll()" class="btn-all">See More</button>
     </section>
+
+   <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-info d-flex">
+            <div id="modal-text" class="modal-feature"></div>
+            <div id="modal-image" class="modal-img"></div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      
 </main>
 
 
